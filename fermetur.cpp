@@ -58,32 +58,6 @@ for (int i=0; i < nH; i++) // ça va dilater la couleur
  {
  for (int j=0; j < nW; j++)
  {
-
-
-/*
-  int idx = i*nW+j;
-  OCTET elementmini = ImgIn[idx];
-  for (int di=-1; di < 1; di++) // ça va dilater la couleur
- {
- for (int dj=0-1; dj < 1; dj++)
- {
-    int idx2 = (i+di)*nW+(j+dj);
-    if(idx2>=0 && ImgIn[idx2] != 255){
-      if(dilatation){
-        elementmini=std::max(ImgIn[idx2], elementmini);
-      }else{
-        elementmini=std::min(ImgIn[idx2], elementmini);
-
-      }
-      }
-    }
- }
- ImgOut[i*nW+j]=elementmini;
- */
-
-
- // valeur_pixel_actuel = ImgIn[i * nW + j]; 
- 
  if (ImgIn[i*nW+j] == 0) { // si pixel est noir on modifie ces voisinns si besoin
 
  if (ImgIn[(i-1)*nW+(j-1)] == 255) { //case haut gauche
